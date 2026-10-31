@@ -1,20 +1,23 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>♡Olivia's little corner ♡</title>
+
 <!-- Open Graph Meta Tags (Hiển thị preview khi chia sẻ link) -->
 <meta property="og:title" content="♡ Olivia's little corner ♡" />
 <meta property="og:description" content="Welcome to my little corner — The Velvet Garden" />
-<meta property="og:image" content="https://oliviawinstoncinna.netlify.app/bg.jpg" />
-<meta property="og:url" content="https://oliviawinstoncinna.netlify.app" />
+<meta property="og:image" content="https://oliviawinston.github.io/oliviawinston-garden/myself.jpg" />
+<meta property="og:url" content="https://oliviawinston.github.io/oliviawinston-garden/" />
 <meta property="og:type" content="website" />
 
-<!-- Cho Twitter/X (nếu có chia sẻ) -->
+<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="♡ Olivia's little corner ♡" />
 <meta name="twitter:description" content="Welcome to my little corner — The Velvet Garden" />
-<meta name="twitter:image" content="https://oliviawinstoncinna.netlify.app/bg.jpg" />
+<meta name="twitter:image" content="https://oliviawinston.github.io/oliviawinston-garden/myself.jpg" />
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Quicksand:wght@400;500;700&display=swap');
 
@@ -26,7 +29,8 @@ body {
   font-family: 'Quicksand', Arial, sans-serif;
   background-color: #ffe8f2;
   background-image: radial-gradient(#f4a9cb 1px, transparent 1px);
-  background-size: 18px 18px;}
+  background-size: 18px 18px;
+}
 
 a { color: inherit; text-decoration: none; }
 
@@ -34,7 +38,8 @@ header {
   text-align: center;
   padding: 35px 15px 20px;
   background: linear-gradient(135deg, #f8bad6, #fff0f7);
-  border-bottom: 3px double #d66d9f;}
+  border-bottom: 3px double #d66d9f;
+}
 
 header .tiny { font-size: 12px; letter-spacing: 4px; }
 
@@ -43,7 +48,8 @@ h1 {
   font-size: clamp(38px, 8vw, 68px);
   margin: 15px 0 5px;
   color: #a32e69;
-  text-shadow: 2px 2px white;}
+  text-shadow: 2px 2px white;
+}
 
 .blink { animation: blink 1s steps(2, start) infinite; }
 
@@ -56,19 +62,22 @@ nav {
   gap: 10px;
   padding: 16px;
   background: #fff6fa;
-  border-bottom: 1px dashed #d66d9f;}
+  border-bottom: 1px dashed #d66d9f;
+}
 
 nav a {
   padding: 8px 15px;
   border: 1px solid #df8bb3;
   border-radius: 20px;
   font-size: 12px;
-  transition: 0.3s;}
+  transition: 0.3s;
+}
 
 nav a:hover {
   background: #c64d86;
   color: white;
-  transform: translateY(-3px);}
+  transform: translateY(-3px);
+}
 
 main { width: min(900px, 92%); margin: 28px auto; }
 
@@ -77,19 +86,22 @@ main { width: min(900px, 92%); margin: 28px auto; }
   border: 1px solid #e6a2c3;
   box-shadow: 5px 5px 0 #efbfd5;
   padding: 22px;
-  margin-bottom: 25px;}
+  margin-bottom: 25px;
+}
 
 h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 30px;
   color: #a32e69;
-  margin-top: 0;}
+  margin-top: 0;
+}
 
 .hero {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 22px;
-  align-items: center;}
+  align-items: center;
+}
 
 .portrait {
   min-height: 220px;
@@ -98,13 +110,15 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;}
+  overflow: hidden;
+}
 
 .profile-photo {
   display: block;
   width: 100%;
   height: 300px;
-  object-fit: cover;}
+  object-fit: cover;
+}
 
 .tag {
   display: inline-block;
@@ -112,37 +126,43 @@ h2 {
   padding: 6px 10px;
   margin: 3px;
   border-radius: 5px;
-  font-size: 12px;}
+  font-size: 12px;
+}
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;}
+  gap: 14px;
+}
 
 .mini {
   border: 1px dashed #df8bb3;
   padding: 15px;
-  background: #fff2f8;}
+  background: #fff2f8;
+}
 
 .mini h3 { margin-top: 0; color: #a32e69; }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;}
+  gap: 12px;
+}
 
 .gallery figure {
   margin: 0;
   overflow: hidden;
   border: 1px solid #df8bb3;
-  background: #fff2f8;}
+  background: #fff2f8;
+}
 
 .gallery img {
   display: block;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  transition: 0.3s;}
+  transition: 0.3s;
+}
 
 .gallery figure:hover img { transform: scale(1.05) rotate(-2deg); }
 
@@ -150,14 +170,16 @@ h2 {
   padding: 8px;
   text-align: center;
   font-size: 12px;
-  color: #8f4569;}
+  color: #8f4569;
+}
 
 .quote {
   text-align: center;
   font-family: 'Cormorant Garamond', serif;
   font-size: 25px;
   font-style: italic;
-  color: #a32e69;}
+  color: #a32e69;
+}
 
 button {
   font: inherit;
@@ -166,7 +188,8 @@ button {
   border: none;
   border-radius: 20px;
   padding: 10px 18px;
-  cursor: pointer;}
+  cursor: pointer;
+}
 
 button:hover { background: #a32e69; }
 
@@ -176,22 +199,26 @@ button:hover { background: #a32e69; }
   padding: 18px;
   background: #ffe3ef;
   border: 1px dashed #c64d86;
-  scroll-margin-top: 24px;}
+  scroll-margin-top: 24px;
+}
 
 footer {
   text-align: center;
   padding: 28px 10px;
   background: #f8bad6;
-  font-size: 12px;}
+  font-size: 12px;
+}
 
 .sparkle {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
-  animation: floatUp 2s ease-out forwards;}
+  animation: floatUp 2s ease-out forwards;
+}
 
 @keyframes floatUp {
-  to { transform: translateY(-100px) rotate(30deg); opacity: 0; }}
+  to { transform: translateY(-100px) rotate(30deg); opacity: 0; }
+}
 
 input, textarea {
   width: 100%;
@@ -201,7 +228,8 @@ input, textarea {
   border-radius: 8px;
   font: inherit;
   color: #541d39;
-  background: #fffafd;}
+  background: #fffafd;
+}
 
 textarea { resize: vertical; }
 
@@ -211,19 +239,22 @@ textarea { resize: vertical; }
   padding: 12px;
   margin: 12px 0;
   border-radius: 5px;
-  overflow-wrap: anywhere;}
+  overflow-wrap: anywhere;
+}
 
 .score {
   font-family: 'Cormorant Garamond', serif;
   font-size: 48px;
   color: #a32e69;
-  font-weight: 600;}
+  font-weight: 600;
+}
 
 .rating-item { margin: 18px 0; text-align: left; }
 
 .rating-item input[type="range"] {
   padding: 0;
-  accent-color: #c64d86;}
+  accent-color: #c64d86;
+}
 
 .community-note { font-size: 12px; color: #98708a; }
 
@@ -231,9 +262,11 @@ textarea { resize: vertical; }
   .hero { grid-template-columns: 1fr; }
   .grid { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
-  .profile-photo { height: 260px; }}
+  .profile-photo { height: 260px; }
+}
 </style>
-  <!-- Firebase App và Realtime Database SDK -->
+
+<!-- Firebase SDK (Chỉ giữ 1 phiên bản duy nhất ở head) -->
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 </head>
@@ -340,7 +373,6 @@ textarea { resize: vertical; }
     </div>
   </section>
 
-
   <!-- WHAT DO YOU THINK ABOUT OLIVIA -->
   <section class="card" id="opinions">
     <h2>♡ What Do You Think About Olivia?</h2>
@@ -413,10 +445,10 @@ textarea { resize: vertical; }
     <p style="text-align:center">♡ A little reminder to be yourself ♡</p>
   </section>
 
- <!-- GUESTBOOK -->
+  <!-- GUESTBOOK -->
   <section class="card" id="guestbook">
     <h2>♡ Guestbook</h2>
-    <p>Leave a little message before you go. I'd love to read them! Or maybe a lovely message for everyone accessing to this website <3333 </p>
+    <p>Leave a little message before you go. I'd love to read them! Or maybe a lovely message for everyone accessing to this website &lt;3333 </p>
 
     <form id="guestForm">
       <label for="guestName">Your name or nickname</label>
@@ -431,6 +463,7 @@ textarea { resize: vertical; }
     <div id="messages" aria-live="polite"></div>
     <p class="community-note">Thank you so much!!!</p>
   </section>
+
   <!-- SECRET -->
   <section class="card" id="secret" style="text-align:center;">
     <h2>♡ A little secret</h2>
@@ -453,12 +486,8 @@ textarea { resize: vertical; }
   <p>Thanks for visiting ✧</p>
 </footer>
 
- <!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
-
 <script>
-// FIREBASE REALTIME DATABASE CONFIG & FUNCTIONS
+// 1. CẤU HÌNH & KHỞI TẠO FIREBASE REALTIME DATABASE
 const firebaseConfig = {
   databaseURL: "https://olivianite-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
@@ -467,7 +496,7 @@ if (!firebase.apps.length) {
 }
 const db = firebase.database();
 
-// Hàm đọc dữ liệu từ Firebase
+// 2. HÀM ĐỌC DỮ LIỆU CHUẨN REALTIME
 function readCommunityData(key, callback) {
   db.ref(key).on('value', (snapshot) => {
     const data = snapshot.val();
@@ -478,39 +507,74 @@ function readCommunityData(key, callback) {
   });
 }
 
-// Hàm ghi dữ liệu vào Firebase
+// 3. HÀM GHI DỮ LIỆU VÀO FIREBASE
 function writeCommunityData(key, value) {
   try {
     db.ref(key).push(value);
     return true;
   } catch (error) {
     console.error("Lỗi ghi Firebase:", error);
-    alert("Không thể gửi tin nhắn. Vui lòng thử lại!");
+    alert("Không thể gửi dữ liệu. Vui lòng thử lại!");
     return false;
   }
 }
-// Khởi tạo Firebase Database
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
 
+// 4. HÀM HIỂN THỊ DANH SÁCH TIN NHẮN TỪ FIREBASE
+function renderEntries(key, targetId, textKey) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+
+  readCommunityData(key, function(entries) {
+    target.innerHTML = '';
+    if (!entries || entries.length === 0) {
+      target.innerHTML = '<p style="color: #98708a; font-size: 13px;">Chưa có dữ liệu nào. Hãy là người đầu tiên để lại lời nhắn nha! ♡</p>';
+      return;
+    }
+
+    entries.slice().reverse().forEach(entry => {
+      const div = document.createElement('div');
+      div.className = 'message';
+      
+      const text = typeof entry === 'object' ? entry[textKey] || entry.message || entry.text || JSON.stringify(entry) : entry;
+      const name = entry.name ? `<strong>${entry.name}</strong>: ` : '';
+      
+      div.innerHTML = `${name}${text}`;
+      target.appendChild(div);
+    });
+  });
+}
+
+// 5. HIỂN THỊ ĐIỂM LEGIT CHECK TỪ FIREBASE
+function renderLegitScore() {
+  const score = document.getElementById("totalScore");
+  const count = document.getElementById("reviewCount");
+  if (!score || !count) return;
+
+  readCommunityData("olivianiteRatings", function(ratings) {
+    if (!ratings || !ratings.length) {
+      score.textContent = "--";
+      count.textContent = "No reviews submitted yet.";
+      return;
+    }
+
+    const average = ratings.reduce((sum, item) => sum + (item.score || 0), 0) / ratings.length;
+    score.textContent = Math.round(average) + "/100";
+    count.textContent = ratings.length + " review(s) submitted.";
+  });
+}
+
+// 6. SỰ KIỆN SECRET & SPARKLE
 function showSecret(event) {
   if (event) event.preventDefault();
-
   const secret = document.getElementById("secret");
-  
-  // Nếu đang ẩn thì mở ra, nếu đang mở thì ẩn đi
   if (secret.style.display === "none" || secret.style.display === "") {
     secret.style.display = "block";
-    secret.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+    secret.scrollIntoView({ behavior: "smooth", block: "start" });
   } else {
     secret.style.display = "none";
   }
 }
 
-// SPARKLE EFFECT
 document.addEventListener('click', function(event) {
   const sparkle = document.createElement('span');
   sparkle.className = 'sparkle';
@@ -523,74 +587,11 @@ document.addEventListener('click', function(event) {
   setTimeout(function() { sparkle.remove(); }, 2000);
 });
 
-// HÀM HIỂN THỊ TIN NHẮN TỪ FIREBASE
-function renderEntries(key, targetId, textKey) {
-  const target = document.getElementById(targetId);
-  if (!target) return;
+// 7. XỬ LÝ SỰ KIỆN FORM SUBMIT
 
-  readCommunityData(key, function(entries) {
-    target.innerHTML = '';
-    if (!entries || entries.length === 0) {
-      target.innerHTML = '<p style="color: #98708a; font-size: 13px;">Chưa có tin nhắn nào. Hãy là người đầu tiên để lại lời nhắn nha! ♡</p>';
-      return;
-    }
-
-    // Đảo ngược để tin nhắn mới nhất nằm trên cùng
-    entries.slice().reverse().forEach(entry => {
-      const div = document.createElement('div');
-      div.className = 'entry-card'; // Sử dụng class CSS cũ của bà
-      div.style.cssText = 'background: rgba(255,255,255,0.6); padding: 10px; margin-bottom: 8px; border-radius: 8px; border: 1px dashed #f3c1cf;';
-      
-      const text = typeof entry === 'object' ? entry[textKey] || entry.message || entry.text || JSON.stringify(entry) : entry;
-      const name = entry.name ? `<strong>${entry.name}</strong>: ` : '';
-      
-      div.innerHTML = `${name}${text}`;
-      target.appendChild(div);
-    });
-  });
-}
-  // ĐOẠN XỬ LÝ KHI BẤM NÚT GỬI TIN NHẮN
-const guestForm = document.getElementById('guestbookForm');
-
-if (guestForm) {
-  guestForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const nameInput = document.getElementById('guestName');
-    const messageInput = document.getElementById('guestMessage');
-    
-    const name = nameInput ? nameInput.value.trim() : '';
-    const message = messageInput ? messageInput.value.trim() : '';
-    
-    if (!message) {
-      alert("Bà nhập lời nhắn trước khi gửi nha! ♡");
-      return;
-    }
-    
-    // 1. Ghi tin nhắn mới vào Firebase Database
-    const isSaved = writeCommunityData('guestbook', {
-      name: name || 'Ẩn danh',
-      message: message,
-      timestamp: Date.now()
-    });
-    
-    // 2. Xóa trắng ô nhập liệu sau khi gửi thành công
-    if (isSaved) {
-      if (nameInput) nameInput.value = '';
-      if (messageInput) messageInput.value = '';
-    }
-  });
-}
-
-// TỰ ĐỘNG TẢI TIN NHẮN KHI VỪA MỞ TRANG WEB
-document.addEventListener("DOMContentLoaded", function() {
-  renderEntries('guestbook', 'guestbookEntries', 'message');
-});
-
-// GUESTBOOK SUBMIT
+// GUESTBOOK
 document.getElementById("guestForm").addEventListener("submit", function(event) {
   event.preventDefault();
-
   const name = document.getElementById("guestName").value.trim() || "Anonymous";
   const message = document.getElementById("guestMessage").value.trim();
 
@@ -599,19 +600,14 @@ document.getElementById("guestForm").addEventListener("submit", function(event) 
     return;
   }
 
-  const entries = readCommunityData("olivianiteGuestbook");
-  entries.push({ name, message });
-
-  if (writeCommunityData("olivianiteGuestbook", entries)) {
+  if (writeCommunityData("olivianiteGuestbook", { name, message, timestamp: Date.now() })) {
     this.reset();
-    renderEntries("olivianiteGuestbook", "messages", "message");
   }
 });
 
 // OPINION SUBMIT
 document.getElementById("opinionForm").addEventListener("submit", function(event) {
   event.preventDefault();
-
   const name = document.getElementById("opinionName").value.trim() || "Anonymous";
   const message = document.getElementById("opinionText").value.trim();
 
@@ -620,16 +616,12 @@ document.getElementById("opinionForm").addEventListener("submit", function(event
     return;
   }
 
-  const entries = readCommunityData("olivianiteOpinions");
-  entries.push({ name, message });
-
-  if (writeCommunityData("olivianiteOpinions", entries)) {
+  if (writeCommunityData("olivianiteOpinions", { name, message, timestamp: Date.now() })) {
     this.reset();
-    renderEntries("olivianiteOpinions", "opinionsList", "message");
   }
 });
 
-// RATING SLIDERS
+// RATING SLIDERS & SUBMIT
 ["r1", "r2", "r3", "r4", "r5"].forEach((id, index) => {
   const slider = document.getElementById(id);
   if (slider) {
@@ -639,43 +631,17 @@ document.getElementById("opinionForm").addEventListener("submit", function(event
   }
 });
 
-// CALCULATE LEGIT CHECK SCORE
-function renderLegitScore() {
-  const ratings = readCommunityData("olivianiteRatings");
-  const score = document.getElementById("totalScore");
-  const count = document.getElementById("reviewCount");
-
-  if (!score || !count) return;
-
-  if (!ratings.length) {
-    score.textContent = "--";
-    count.textContent = "No reviews submitted yet.";
-    return;
-  }
-
-  const average = ratings.reduce((sum, item) => sum + item.score, 0) / ratings.length;
-
-  score.textContent = Math.round(average) + "/100";
-  count.textContent = ratings.length + " review(s) submitted.";
-}
-
-// SUBMIT LEGIT CHECK
 document.getElementById("ratingForm").addEventListener("submit", function(event) {
   event.preventDefault();
-
   const values = ["r1", "r2", "r3", "r4", "r5"].map(id => Number(document.getElementById(id).value));
   const score = values.reduce((sum, value) => sum + value, 0) / values.length;
 
-  const ratings = readCommunityData("olivianiteRatings");
-  ratings.push({ score });
-
-  if (writeCommunityData("olivianiteRatings", ratings)) {
-    renderLegitScore();
+  if (writeCommunityData("olivianiteRatings", { score, timestamp: Date.now() })) {
     alert("Thank you for your review!");
   }
 });
 
-// INITIALIZE ON LOAD
+// 8. TỰ ĐỘNG KÍCH HOẠT KHI MỞ TRANG WEB
 document.addEventListener("DOMContentLoaded", function() {
   renderEntries("olivianiteGuestbook", "messages", "message");
   renderEntries("olivianiteOpinions", "opinionsList", "message");
