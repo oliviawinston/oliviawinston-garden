@@ -233,6 +233,9 @@ textarea { resize: vertical; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .profile-photo { height: 260px; }}
 </style>
+  <!-- Firebase App và Realtime Database SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 </head>
 
 <body>
@@ -455,17 +458,37 @@ textarea { resize: vertical; }
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 
 <script>
-// Thông tin Firebase cấu hình trực tiếp từ dự án olivianite của bà
+// FIREBASE REALTIME DATABASE CONFIG & FUNCTIONS
 const firebaseConfig = {
-  apiKey: "AIzaSyDa4oJn9kSlXK-vj9N2npl74zihr4Jipk8",
-  authDomain: "olivianite.firebaseapp.com",
-  databaseURL: "https://olivianite-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "olivianite",
-  storageBucket: "olivianite.firebasestorage.app",
-  messagingSenderId: "942791067335",
-  appId: "1:942791067335:web:a00580e938579b43b1e0e2",
-  measurementId: "G-36QD0R6L0Z"
+  databaseURL: "https://olivianite-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+const db = firebase.database();
+
+// Hàm đọc dữ liệu từ Firebase
+function readCommunityData(key, callback) {
+  db.ref(key).on('value', (snapshot) => {
+    const data = snapshot.val();
+    const arrayData = data ? Object.values(data) : [];
+    if (typeof callback === 'function') {
+      callback(arrayData);
+    }
+  });
+}
+
+// Hàm ghi dữ liệu vào Firebase
+function writeCommunityData(key, value) {
+  try {
+    db.ref(key).push(value);
+    return true;
+  } catch (error) {
+    console.error("Lỗi ghi Firebase:", error);
+    alert("Không thể gửi tin nhắn. Vui lòng thử lại!");
+    return false;
+  }
+}
 // Khởi tạo Firebase Database
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
@@ -500,45 +523,30 @@ document.addEventListener('click', function(event) {
   setTimeout(function() { sparkle.remove(); }, 2000);
 });
 
-// LOCAL STORAGE FUNCTIONS
-function readCommunityData(key) {
-  try {
-    const value = JSON.parse(localStorage.getItem(key));
-    return Array.isArray(value) ? value : [];
-  } catch (error) {
-    return [];
-  }
-}
-
-function writeCommunityData(key, value) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value));
-    return true;
-  } catch (error) {
-    alert("Your browser could not save this entry. Please check your browser storage settings.");
-    return false;
-  }
-}
-
-// DISPLAY GUESTBOOK AND OPINIONS
+// HÀM HIỂN THỊ TIN NHẮN TỪ FIREBASE
 function renderEntries(key, targetId, textKey) {
   const target = document.getElementById(targetId);
   if (!target) return;
-  const entries = readCommunityData(key);
-  target.replaceChildren();
 
-  entries.slice().reverse().forEach(entry => {
-    const card = document.createElement("div");
-    card.className = "message";
+  readCommunityData(key, function(entries) {
+    target.innerHTML = '';
+    if (!entries || entries.length === 0) {
+      target.innerHTML = '<p style="color: #98708a; font-size: 13px;">Chưa có tin nhắn nào. Hãy là người đầu tiên để lại lời nhắn nha! ♡</p>';
+      return;
+    }
 
-    const author = document.createElement("strong");
-    author.textContent = entry.name || "Anonymous";
-
-    const message = document.createElement("p");
-    message.textContent = entry[textKey];
-
-    card.append(author, message);
-    target.appendChild(card);
+    // Đảo ngược để tin nhắn mới nhất nằm trên cùng
+    entries.slice().reverse().forEach(entry => {
+      const div = document.createElement('div');
+      div.className = 'entry-card'; // Sử dụng class CSS cũ của bà
+      div.style.cssText = 'background: rgba(255,255,255,0.6); padding: 10px; margin-bottom: 8px; border-radius: 8px; border: 1px dashed #f3c1cf;';
+      
+      const text = typeof entry === 'object' ? entry[textKey] || entry.message || entry.text || JSON.stringify(entry) : entry;
+      const name = entry.name ? `<strong>${entry.name}</strong>: ` : '';
+      
+      div.innerHTML = `${name}${text}`;
+      target.appendChild(div);
+    });
   });
 }
 
