@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>♡Olivia's little corner ♡</title>
 
+<!-- Favicon Icon (Dùng Emoji cái nơ 🎀 trực tiếp trên tab trình duyệt) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎀</text></svg>">
+
 <!-- Open Graph Meta Tags (Hiển thị preview khi chia sẻ link) -->
 <meta property="og:title" content="♡ Olivia's little corner ♡" />
 <meta property="og:description" content="Welcome to my little corner — The Velvet Garden" />
@@ -12,7 +15,7 @@
 <meta property="og:url" content="https://oliviawinston.github.io/oliviawinston-garden/" />
 <meta property="og:type" content="website" />
 
-<!-- Twitter / X -->
+<!-- Twitter / X Meta Tags -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="♡ Olivia's little corner ♡" />
 <meta name="twitter:description" content="Welcome to my little corner — The Velvet Garden" />
@@ -266,7 +269,7 @@ textarea { resize: vertical; }
 }
 </style>
 
-<!-- Firebase SDK (Chỉ giữ 1 phiên bản duy nhất ở head) -->
+<!-- Firebase SDK v8 -->
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 </head>
@@ -496,7 +499,7 @@ if (!firebase.apps.length) {
 }
 const db = firebase.database();
 
-// 2. HÀM ĐỌC DỮ LIỆU CHUẨN REALTIME
+// 2. HÀM ĐỌC DỮ LIỆU REALTIME
 function readCommunityData(key, callback) {
   db.ref(key).on('value', (snapshot) => {
     const data = snapshot.val();
