@@ -1,0 +1,642 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>♡Olivia's little corner ♡</title>
+<!-- Open Graph Meta Tags (Hiển thị preview khi chia sẻ link) -->
+<meta property="og:title" content="♡ Olivia's little corner ♡" />
+<meta property="og:description" content="Welcome to my little corner — The Velvet Garden" />
+<meta property="og:image" content="https://oliviawinstoncinna.netlify.app/images/bg.jpg" />
+<meta property="og:url" content="https://oliviawinstoncinna.netlify.app" />
+<meta property="og:type" content="website" />
+
+<!-- Cho Twitter/X (nếu có chia sẻ) -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="♡ Olivia's little corner ♡" />
+<meta name="twitter:description" content="Welcome to my little corner — The Velvet Garden" />
+<meta name="twitter:image" content="https://oliviawinstoncinna.netlify.app/images/bg.jpg" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Quicksand:wght@400;500;700&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: #541d39;
+  font-family: 'Quicksand', Arial, sans-serif;
+  background-color: #ffe8f2;
+  background-image: radial-gradient(#f4a9cb 1px, transparent 1px);
+  background-size: 18px 18px;}
+
+a { color: inherit; text-decoration: none; }
+
+header {
+  text-align: center;
+  padding: 35px 15px 20px;
+  background: linear-gradient(135deg, #f8bad6, #fff0f7);
+  border-bottom: 3px double #d66d9f;}
+
+header .tiny { font-size: 12px; letter-spacing: 4px; }
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 8vw, 68px);
+  margin: 15px 0 5px;
+  color: #a32e69;
+  text-shadow: 2px 2px white;}
+
+.blink { animation: blink 1s steps(2, start) infinite; }
+
+@keyframes blink { to { visibility: hidden; } }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  background: #fff6fa;
+  border-bottom: 1px dashed #d66d9f;}
+
+nav a {
+  padding: 8px 15px;
+  border: 1px solid #df8bb3;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: 0.3s;}
+
+nav a:hover {
+  background: #c64d86;
+  color: white;
+  transform: translateY(-3px);}
+
+main { width: min(900px, 92%); margin: 28px auto; }
+
+.card {
+  background: rgba(255, 250, 253, 0.94);
+  border: 1px solid #e6a2c3;
+  box-shadow: 5px 5px 0 #efbfd5;
+  padding: 22px;
+  margin-bottom: 25px;}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  color: #a32e69;
+  margin-top: 0;}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 22px;
+  align-items: center;}
+
+.portrait {
+  min-height: 220px;
+  background: linear-gradient(145deg, #f3bad5, #fcecf5);
+  border: 2px dashed #c64d86;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;}
+
+.tag {
+  display: inline-block;
+  background: #f8d5e5;
+  padding: 6px 10px;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 12px;}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;}
+
+.mini {
+  border: 1px dashed #df8bb3;
+  padding: 15px;
+  background: #fff2f8;}
+
+.mini h3 { margin-top: 0; color: #a32e69; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;}
+
+.gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #df8bb3;
+  background: #fff2f8;}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: 0.3s;}
+
+.gallery figure:hover img { transform: scale(1.05) rotate(-2deg); }
+
+.gallery figcaption {
+  padding: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #8f4569;}
+
+.quote {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  font-style: italic;
+  color: #a32e69;}
+
+button {
+  font: inherit;
+  background: #c64d86;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 18px;
+  cursor: pointer;}
+
+button:hover { background: #a32e69; }
+
+#secret {
+  display: none;
+  margin-top: 15px;
+  padding: 18px;
+  background: #ffe3ef;
+  border: 1px dashed #c64d86;
+  scroll-margin-top: 24px;}
+
+footer {
+  text-align: center;
+  padding: 28px 10px;
+  background: #f8bad6;
+  font-size: 12px;}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: floatUp 2s ease-out forwards;}
+
+@keyframes floatUp {
+  to { transform: translateY(-100px) rotate(30deg); opacity: 0; }}
+
+input, textarea {
+  width: 100%;
+  padding: 11px;
+  margin: 7px 0 15px;
+  border: 1px solid #df8bb3;
+  border-radius: 8px;
+  font: inherit;
+  color: #541d39;
+  background: #fffafd;}
+
+textarea { resize: vertical; }
+
+.message {
+  background: #fff2f8;
+  border-left: 3px solid #c64d86;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 5px;
+  overflow-wrap: anywhere;}
+
+.score {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  color: #a32e69;
+  font-weight: 600;}
+
+.rating-item { margin: 18px 0; text-align: left; }
+
+.rating-item input[type="range"] {
+  padding: 0;
+  accent-color: #c64d86;}
+
+.community-note { font-size: 12px; color: #98708a; }
+
+@media (max-width: 600px) {
+  .hero { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .profile-photo { height: 260px; }}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="tiny">୨୧ A LITTLE CORNER OF MY WORLD ୨୧</div>
+  <h1>THE PEONY REVERIE</h1>
+  <p>♡ Born to be wild ♡</p>
+  <div>✧ <span class="blink">WELCOME TO MY WORLD</span> ✧</div>
+</header>
+
+<nav>
+  <a href="#about">ABOUT ME</a>
+  <a href="#interests">MY WORLD</a>
+  <a href="#gallery">GALLERY</a>
+  <a href="#guestbook">GUESTBOOK</a>
+  <a href="#opinions">WHAT DO YOU THINK?</a>
+  <a href="#legit">LEGIT CHECK</a>
+  <a href="#secret" onclick="showSecret(event)">A SECRET</a>
+</nav>
+
+<main>
+
+  <!-- ABOUT ME -->
+  <section class="card hero" id="about">
+    <div class="portrait">
+      <img src="images/myself.jpg" alt="Olivia" class="profile-photo">
+    </div>
+
+    <div>
+      <h2>Hiiiiiiii ♡</h2>
+      <p>You've just entered my little corner. Welcome to my world</p>
+      <p>I'm Olivia. You also can call me Phan Huỳnh Quế Lan or Chi Chi — an amateur artist, designer. I love drawing. Of course!!!!</p>
+      <span class="tag">♡ ARTIST</span>
+      <span class="tag">✧ PISCES</span>
+      <span class="tag">☾ NIGHT OWL</span>
+    </div>
+  </section>
+
+  <!-- MY WORLD -->
+  <section class="card" id="interests">
+    <h2>♡ Things I adore</h2>
+
+    <div class="grid">
+      <div class="mini">
+        <h3>🎨 My art corner</h3>
+        <p>Original characters, strange little stories and endless ideas.</p>
+      </div>
+
+      <div class="mini">
+        <h3>🎧 On repeat</h3>
+        <p>I don't know what is my fav genre but my fav artists are Ariana, Keshi and soooooo on</p>
+      </div>
+
+      <div class="mini">
+        <h3>🕯️ My aesthetic</h3>
+        <p>I adore vintagecore,and moristyle too!!</p>
+      </div>
+
+      <div class="mini">
+        <h3>📚 Fictional worlds</h3>
+        <p>Horror, thrillers, anime, games and characters worth obsessing over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="card" id="gallery">
+    <h2>✧ My little gallery</h2>
+    <p>A tiny museum of things that feel like me.</p>
+
+    <div class="gallery">
+      <figure>
+        <img src="images/charoc.jpg" alt="Favourite characters illustration">
+        <figcaption>♡Me and one of my favourite characters - By me</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/hyacas.jpg" alt="Cute pastel character illustration">
+        <figcaption>✧ My cute girls - By Phạm Song Nhi</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/lyrics.jpg" alt="Favorite song lyrics">
+        <figcaption>Understand - By Keshi</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/nikki.jpg" alt="Nikki">
+        <figcaption>♡My lovely daughter - Nikki</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/core.jpg" alt="pinky illustration">
+        <figcaption>🌸🎀 My aesthetic</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/peonies.jpg" alt="Pink peonies">
+        <figcaption>🌸 My fav flower</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <!-- WHAT DO YOU THINK ABOUT OLIVIA -->
+  <section class="card" id="opinions">
+    <h2>♡ What Do You Think About Olivia?</h2>
+    <p>What was your first impression of Olivia? Leave a kind and respectful comment!</p>
+
+    <form id="opinionForm">
+      <label for="opinionName">Your name or nickname</label>
+      <input id="opinionName" maxlength="40" placeholder="Your name or nickname">
+
+      <label for="opinionText">Your thoughts</label>
+      <textarea id="opinionText" rows="4" maxlength="500" placeholder="Your thoughts about Olivia..."></textarea>
+
+      <button type="submit">Submit opinion ♡</button>
+    </form>
+
+    <div id="opinionsList" aria-live="polite"></div>
+    <p class="community-note">Thank you so much!!</p>
+  </section>
+
+  <!-- LEGIT CHECK -->
+  <section class="card" id="legit">
+    <h2>♡ Olivia Winston — Legit Check</h2>
+    <p>How would you rate Olivia? Give your honest and respectful opinion.</p>
+
+    <div style="text-align:center">
+      <div class="score" id="totalScore">--</div>
+      <p>COMMUNITY TRUST SCORE</p>
+      <p id="reviewCount" class="community-note">No reviews submitted yet.</p>
+    </div>
+
+    <hr style="border:0;border-top:1px dashed #df8bb3;margin:20px 0">
+
+    <form id="ratingForm">
+      <div class="rating-item">
+        <label for="r1">Trustworthiness: <span id="v1">50</span>/100</label>
+        <input type="range" min="0" max="100" value="50" id="r1">
+      </div>
+
+      <div class="rating-item">
+        <label for="r2">Professionalism: <span id="v2">50</span>/100</label>
+        <input type="range" min="0" max="100" value="50" id="r2">
+      </div>
+
+      <div class="rating-item">
+        <label for="r3">Reliability: <span id="v3">50</span>/100</label>
+        <input type="range" min="0" max="100" value="50" id="r3">
+      </div>
+
+      <div class="rating-item">
+        <label for="r4">Conflict Resolution: <span id="v4">50</span>/100</label>
+        <input type="range" min="0" max="100" value="50" id="r4">
+      </div>
+
+      <div class="rating-item">
+        <label for="r5">Personality: <span id="v5">50</span>/100</label>
+        <input type="range" min="0" max="100" value="50" id="r5">
+      </div>
+
+      <div style="text-align:center">
+        <button type="submit">Submit rating ♡</button>
+      </div>
+    </form>
+
+    <p class="community-note">Scores represent visitor opinions, not an official or objective verification of Olivia.</p>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="card">
+    <p class="quote">"People will judge you anyway so just be yourself"</p>
+    <p style="text-align:center">♡ A little reminder to be yourself ♡</p>
+  </section>
+
+ <!-- GUESTBOOK -->
+  <section class="card" id="guestbook">
+    <h2>♡ Guestbook</h2>
+    <p>Leave a little message before you go. I'd love to read them! Or maybe a lovely message for everyone accessing to this website <3333 </p>
+
+    <form id="guestForm">
+      <label for="guestName">Your name or nickname</label>
+      <input id="guestName" maxlength="40" placeholder="Anonymous">
+
+      <label for="guestMessage">Your message</label>
+      <textarea id="guestMessage" rows="4" maxlength="500" placeholder="Write something nice..."></textarea>
+
+      <button type="submit">Leave a message ♡</button>
+    </form>
+
+    <div id="messages" aria-live="polite"></div>
+    <p class="community-note">Thank you so much!!!</p>
+  </section>
+  <!-- SECRET -->
+  <section class="card" id="secret" style="text-align:center;">
+    <h2>♡ A little secret</h2>
+    <p>let that shit go</p>
+    <div style="display:flex; justify-content:center; align-items:center;">
+        <img src="images/letthatshitgo.jpg"
+             alt="quote"
+             style="width:100%; max-width:500px; height:auto; display:block; margin:15px auto; border-radius:12px;">
+    </div>
+  </section>
+
+  <div style="text-align:center; margin:30px;">
+      <button type="button" onclick="showSecret(event)">♡ Open a secret message ♡</button>
+  </div>
+</main>
+
+<footer>
+  ♡ MADE WITH LOVE & A LITTLE BIT OF MAGIC ♡
+  <p>© 2026 The Velvet Garden</p>
+  <p>Thanks for visiting ✧</p>
+</footer>
+
+ <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+<script>
+// Thông tin Firebase cấu hình trực tiếp từ dự án olivianite của bà
+const firebaseConfig = {
+  apiKey: "AIzaSyDa4oJn9kSlXK-vj9N2npl74zihr4Jipk8",
+  authDomain: "olivianite.firebaseapp.com",
+  databaseURL: "https://olivianite-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "olivianite",
+  storageBucket: "olivianite.firebasestorage.app",
+  messagingSenderId: "942791067335",
+  appId: "1:942791067335:web:a00580e938579b43b1e0e2",
+  measurementId: "G-36QD0R6L0Z"
+};
+// Khởi tạo Firebase Database
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+function showSecret(event) {
+  if (event) event.preventDefault();
+
+  const secret = document.getElementById("secret");
+  
+  // Nếu đang ẩn thì mở ra, nếu đang mở thì ẩn đi
+  if (secret.style.display === "none" || secret.style.display === "") {
+    secret.style.display = "block";
+    secret.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  } else {
+    secret.style.display = "none";
+  }
+}
+
+// SPARKLE EFFECT
+document.addEventListener('click', function(event) {
+  const sparkle = document.createElement('span');
+  sparkle.className = 'sparkle';
+  sparkle.textContent = ['♡', '✧', '⋆', '🎀'][Math.floor(Math.random() * 4)];
+  sparkle.style.left = event.clientX + 'px';
+  sparkle.style.top = event.clientY + 'px';
+  sparkle.style.color = '#c64d86';
+  sparkle.style.fontSize = '20px';
+  document.body.appendChild(sparkle);
+  setTimeout(function() { sparkle.remove(); }, 2000);
+});
+
+// LOCAL STORAGE FUNCTIONS
+function readCommunityData(key) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key));
+    return Array.isArray(value) ? value : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function writeCommunityData(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch (error) {
+    alert("Your browser could not save this entry. Please check your browser storage settings.");
+    return false;
+  }
+}
+
+// DISPLAY GUESTBOOK AND OPINIONS
+function renderEntries(key, targetId, textKey) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  const entries = readCommunityData(key);
+  target.replaceChildren();
+
+  entries.slice().reverse().forEach(entry => {
+    const card = document.createElement("div");
+    card.className = "message";
+
+    const author = document.createElement("strong");
+    author.textContent = entry.name || "Anonymous";
+
+    const message = document.createElement("p");
+    message.textContent = entry[textKey];
+
+    card.append(author, message);
+    target.appendChild(card);
+  });
+}
+
+// GUESTBOOK SUBMIT
+document.getElementById("guestForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("guestName").value.trim() || "Anonymous";
+  const message = document.getElementById("guestMessage").value.trim();
+
+  if (!message) {
+    alert("Please write a message!");
+    return;
+  }
+
+  const entries = readCommunityData("olivianiteGuestbook");
+  entries.push({ name, message });
+
+  if (writeCommunityData("olivianiteGuestbook", entries)) {
+    this.reset();
+    renderEntries("olivianiteGuestbook", "messages", "message");
+  }
+});
+
+// OPINION SUBMIT
+document.getElementById("opinionForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("opinionName").value.trim() || "Anonymous";
+  const message = document.getElementById("opinionText").value.trim();
+
+  if (!message) {
+    alert("Please write your opinion!");
+    return;
+  }
+
+  const entries = readCommunityData("olivianiteOpinions");
+  entries.push({ name, message });
+
+  if (writeCommunityData("olivianiteOpinions", entries)) {
+    this.reset();
+    renderEntries("olivianiteOpinions", "opinionsList", "message");
+  }
+});
+
+// RATING SLIDERS
+["r1", "r2", "r3", "r4", "r5"].forEach((id, index) => {
+  const slider = document.getElementById(id);
+  if (slider) {
+    slider.addEventListener("input", function() {
+      document.getElementById("v" + (index + 1)).textContent = this.value;
+    });
+  }
+});
+
+// CALCULATE LEGIT CHECK SCORE
+function renderLegitScore() {
+  const ratings = readCommunityData("olivianiteRatings");
+  const score = document.getElementById("totalScore");
+  const count = document.getElementById("reviewCount");
+
+  if (!score || !count) return;
+
+  if (!ratings.length) {
+    score.textContent = "--";
+    count.textContent = "No reviews submitted yet.";
+    return;
+  }
+
+  const average = ratings.reduce((sum, item) => sum + item.score, 0) / ratings.length;
+
+  score.textContent = Math.round(average) + "/100";
+  count.textContent = ratings.length + " review(s) submitted.";
+}
+
+// SUBMIT LEGIT CHECK
+document.getElementById("ratingForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const values = ["r1", "r2", "r3", "r4", "r5"].map(id => Number(document.getElementById(id).value));
+  const score = values.reduce((sum, value) => sum + value, 0) / values.length;
+
+  const ratings = readCommunityData("olivianiteRatings");
+  ratings.push({ score });
+
+  if (writeCommunityData("olivianiteRatings", ratings)) {
+    renderLegitScore();
+    alert("Thank you for your review!");
+  }
+});
+
+// INITIALIZE ON LOAD
+document.addEventListener("DOMContentLoaded", function() {
+  renderEntries("olivianiteGuestbook", "messages", "message");
+  renderEntries("olivianiteOpinions", "opinionsList", "message");
+  renderLegitScore();
+});
+</script>
+
+</body>
+</html>
