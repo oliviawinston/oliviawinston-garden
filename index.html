@@ -549,6 +549,43 @@ function renderEntries(key, targetId, textKey) {
     });
   });
 }
+  // ĐOẠN XỬ LÝ KHI BẤM NÚT GỬI TIN NHẮN
+const guestForm = document.getElementById('guestbookForm');
+
+if (guestForm) {
+  guestForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const nameInput = document.getElementById('guestName');
+    const messageInput = document.getElementById('guestMessage');
+    
+    const name = nameInput ? nameInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+    
+    if (!message) {
+      alert("Bà nhập lời nhắn trước khi gửi nha! ♡");
+      return;
+    }
+    
+    // 1. Ghi tin nhắn mới vào Firebase Database
+    const isSaved = writeCommunityData('guestbook', {
+      name: name || 'Ẩn danh',
+      message: message,
+      timestamp: Date.now()
+    });
+    
+    // 2. Xóa trắng ô nhập liệu sau khi gửi thành công
+    if (isSaved) {
+      if (nameInput) nameInput.value = '';
+      if (messageInput) messageInput.value = '';
+    }
+  });
+}
+
+// TỰ ĐỘNG TẢI TIN NHẮN KHI VỪA MỞ TRANG WEB
+document.addEventListener("DOMContentLoaded", function() {
+  renderEntries('guestbook', 'guestbookEntries', 'message');
+});
 
 // GUESTBOOK SUBMIT
 document.getElementById("guestForm").addEventListener("submit", function(event) {
